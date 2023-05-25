@@ -1,0 +1,44 @@
+/* Referenciando seletor pai */
+#conteudo{
+    background: green;
+    padding: 15px;
+    h1, h2{
+        color: black;
+    }
+    a{
+        color: red;
+        &:hover{    //& referencia o seletor pai, que neste caso é a
+            color: yellow;
+        }
+    }
+    
+}
+
+/* Variáveis */
+$cor-primaria: blue;
+$tamanho-titulo: 20px;
+
+h2{
+    color: $cor-primaria;
+}
+
+/* Escopo de Variáveis */
+$cor-padrao: red;
+#rodape {
+    $cor-padrao: blue !global;
+    background-color: $cor-padrao; 
+}
+
+h2{
+    color: $cor-padrao;
+}
+
+/* Interpolação */
+$vermelho: red;
+$classe: vermelho;
+$color: color;
+
+.#{$classe}{
+    #{$color}: $vermelho;
+    
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* Referenciando seletor pai */
+#conteudo {
+  background: green;
+  padding: 15px;
+}
+#conteudo h1, #conteudo h2 {
+  color: black;
+}
+#conteudo a {
+  color: red;
+}
+#conteudo a:hover {
+  color: yellow;
+}
+
+/* Variáveis */
+h2 {
+  color: blue;
+}
+
+/* Escopo de Variáveis */
+#rodape {
+  background-color: blue;
+}
+
+h2 {
+  color: blue;
+}
+
+/* Interpolação */
+.vermelho {
+  color: red;
+}
+
+/*# sourceMappingURL=estilo.css.map */
