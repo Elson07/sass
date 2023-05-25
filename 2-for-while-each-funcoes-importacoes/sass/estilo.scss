@@ -1,0 +1,72 @@
+/* Laços de repetições */
+/* for */
+@for $i from 1 through 3{
+    //de indice 1 até 3 //"through" é até, mas pode se usar também o "to", porém o "to" vai somente até 2
+    .lfor-#{$i}{
+        background: green;
+        margin-bottom: 2px;
+    }
+}
+
+
+/* while */
+$cont: 1; 
+@while $cont < 4{
+    .lwhile-#{$cont}{
+        background: orange;
+        margin-bottom: 2px;
+    }
+
+    $cont: $cont + 1;
+}
+
+/* Listas */
+/* each */
+$lista: green, yellow, red;
+$cont: 1; //o cotador é apenas para interpolar as classe
+@each $cor in $lista{ 
+    //para cada cor em nossa lista faça uma exibição, em resumo, a variável cor recebe um elemto por vez da variável lista, e exibe   
+    .leach-#{$cont}{
+        background: $cor;
+        margin-bottom: 2px;
+    }
+    $cont: $cont + 1;
+}
+
+/* Funções */
+/* Função para retornar uma largura com base no número de colunas */ 
+$total: 12;
+@function largura-coluna($coluna){
+    //percentage é uma função nativa do sass par converter em porcentagem
+    @return percentage($coluna/$total);
+}
+
+$resultado: largura-coluna(6);
+/* #{$resultado} */
+
+@for $i from 1 through $total{
+    .col-#{$i}{
+        background: green;
+        width: largura-coluna($i);
+    }
+
+}
+
+/* Funções nativas */
+//A função mix() é uma função que mixa as cores, resebe como parâmetro 2 cores e uma procentagem para misturas dessa cor.  
+.alerta-1{
+    background: mix(blue, orange, 20%);
+    color: yellow;
+}
+//A função darken() torna a cor mais escura  
+.alerta-2{
+    background: darken(green, 20%);
+    color: yellow;
+}
+//A função lighten() torna a cor mais clara 
+.alerta-3{
+    background: lighten(green, 50%);
+    color: yellow;
+}
+
+/* Existem varias funções nativas em sass, para mais informações acesse a documentação em <<https://sass-lang.com/documentation/variables>> */

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* Laços de repetições */
+/* for */
+.lfor-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.lfor-2 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.lfor-3 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+/* while */
+.lwhile-1 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.lwhile-2 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.lwhile-3 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+/* Listas */
+/* each */
+.leach-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.leach-2 {
+  background: yellow;
+  margin-bottom: 2px;
+}
+
+.leach-3 {
+  background: red;
+  margin-bottom: 2px;
+}
+
+/* Funções */
+/* Função para retornar uma largura com base no número de colunas */
+/* 50% */
+.col-1 {
+  background: green;
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  background: green;
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  background: green;
+  width: 25%;
+}
+
+.col-4 {
+  background: green;
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  background: green;
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  background: green;
+  width: 50%;
+}
+
+.col-7 {
+  background: green;
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  background: green;
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  background: green;
+  width: 75%;
+}
+
+.col-10 {
+  background: green;
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  background: green;
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  background: green;
+  width: 100%;
+}
+
+/* Funções nativas */
+.alerta-1 {
+  background: #cc8433;
+  color: yellow;
+}
+
+.alerta-2 {
+  background: #001a00;
+  color: yellow;
+}
+
+.alerta-3 {
+  background: #80ff80;
+  color: yellow;
+}
+
+/* Existem varias funções nativas em sass, para mais informações acesse a documentação em <<https://sass-lang.com/documentation/variables>> */
+
+/*# sourceMappingURL=estilo.css.map */
