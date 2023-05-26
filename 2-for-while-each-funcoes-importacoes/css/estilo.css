@@ -1,19 +1,24 @@
 @charset "UTF-8";
 /* Laços de repetições */
 /* for */
+/* Este é um aruivo para importação, para criar este tipo de aquivo ele deve sempre conmesar com underline "_" seguido do nome do arquivo e o formato */
+/* Em resumo, este tipo de arquivo não é compilado no css */
 .lfor-1 {
-  background: green;
+  background: blue;
   margin-bottom: 2px;
+  color: white;
 }
 
 .lfor-2 {
-  background: green;
+  background: blue;
   margin-bottom: 2px;
+  color: white;
 }
 
 .lfor-3 {
-  background: green;
+  background: blue;
   margin-bottom: 2px;
+  color: white;
 }
 
 /* while */

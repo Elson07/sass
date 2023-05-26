@@ -1,10 +1,12 @@
 /* Laços de repetições */
 /* for */
+@import 'variaveis.scss'; //importa o arquivo "_variaveis.scss" que contem a variavel "$cor-principal" 
 @for $i from 1 through 3{
     //de indice 1 até 3 //"through" é até, mas pode se usar também o "to", porém o "to" vai somente até 2
     .lfor-#{$i}{
-        background: green;
+        background: $cor-principal;
         margin-bottom: 2px;
+        color: $cor-clara;
     }
 }
 
