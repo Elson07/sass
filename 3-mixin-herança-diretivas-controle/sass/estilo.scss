@@ -1,0 +1,98 @@
+/* Mixim */
+//mixim permite reaproveitar blocos de códigos
+@mixin titulo{
+    background: green;
+    padding: 10px 5px;
+}
+//mixim com parâmetro, o que estiver etre dois pontos ":" é default caso não seja passado parâmetro
+@mixin titulo2($cor, $cor-bg:black){
+    color: $cor;
+    background: $cor-bg;
+    padding: 10px 5px;
+}
+h1{
+    color: white;
+    /* include permite incluir o bloco de código mixim pelo nome */
+    @include titulo;
+}
+
+h2{
+    /*include permite incluir o bloco de código mixim pelo nome e com parâmetro */
+    @include titulo2(yellow, black);
+}
+
+/* Herança */
+/* Mútiplas diretivas */
+.classe1 {
+    color: red; 
+}
+.classe2 {
+    background: black;
+}
+.vermelho {
+    @extend .classe1;
+    @extend .classe2;
+}
+
+/* Encadeamento de diretivas */
+.pai {
+    color: red; 
+}
+.filho {
+    @extend .pai;
+    background: black;
+}
+.erro {
+    @extend .filho;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+/* Encadeamento de diretivas com Placeholders(%) */
+//Com placeholders é possivel criar a classe que erda as outras classes pais, sem crialas no css
+%pai1 {
+    color: red; 
+}
+%filho1 {
+    @extend %pai1;
+    background: black;
+}
+.erro1 {
+    @extend %filho1;
+    padding: 8px;
+    border: 4px solid red;
+}
+
+/* Diretivas de controle */
+$cor: red;
+@if($cor == green){
+    span{
+        color: $cor;
+    }
+}@else if($cor == red){
+    span{
+        color: $cor;
+    }
+}@else{
+    span{
+        color: black;
+    }
+}
+
+/* Diretivas de controle e mixim */
+@mixin tema($tema: padrao){
+    @if( $tema == natal ){
+        background: red;
+        color: white;
+    }@else if( $tema == blackfriday ){
+        background: black;
+        color:white;
+    }@else{
+        background: white;
+        color:black;
+    }
+}
+
+body{
+    @include tema();
+}
